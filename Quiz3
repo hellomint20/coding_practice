@@ -1,0 +1,13 @@
+//반복할 문자열과 몇 번 반복할 것인지 입력받고 출력하기
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        int n = sc.nextInt();
+        
+        System.out.print(str.repeat(n));
+    }
+}
