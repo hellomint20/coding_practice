@@ -1,0 +1,13 @@
+//문자열 곱하기 ex) string, 3 ==> stringstringstring 
+
+class Solution {
+    public String solution(String my_string, int k) {
+        String answer = "";
+        
+        answer = my_string.repeat(k);
+        
+        return answer;
+    }
+}
+
+//repeat 를 이용하여 반복하려는 횟수만큼 반복시킴
