@@ -1,0 +1,15 @@
+//문자 리스트를 문자열로 변환
+
+class Solution {
+    public String solution(String[] arr) {
+        String answer = "";
+      
+        for(String a : arr) {
+            answer += a;
+        }
+        
+        return answer;
+    }
+}
+
+foreach문을 이용하여 리스트를 하나씩 문자로 저장하여 출력
