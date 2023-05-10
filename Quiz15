@@ -1,0 +1,23 @@
+//두 수의 연산값 비교하기
+//입출력 예 #1
+//a ⊕ b = 291 이고, 2 * a * b = 364 입니다. 둘 중 더 큰 값은 364 이므로 364를 return 합니다.
+
+//입출력 예 #2
+//a ⊕ b = 912 이고, 2 * a * b = 364 입니다. 둘 중 더 큰 값은 912 이므로 912를 return 합니다.
+
+class Solution {
+    public int solution(int a, int b) {
+        int answer = 0;
+        
+        String a1 = Integer.toString(a);
+        String b1 = Integer.toString(b);
+        String num = a1+b1;
+        
+        if(Integer.parseInt(num)>= 2*a*b)
+            answer = Integer.parseInt(num);
+        else
+            answer = 2*a*b;
+        
+        return answer;
+    }
+}
