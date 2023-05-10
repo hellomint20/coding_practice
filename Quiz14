@@ -1,0 +1,24 @@
+//더 크게 합치기
+//입출력 예 #1
+//a ⊕ b = 991 이고, b ⊕ a = 919 입니다. 둘 중 더 큰 값은 991 이므로 991을 return 합니다.
+
+//입출력 예 #2
+//a ⊕ b = 898 이고, b ⊕ a = 889 입니다. 둘 중 더 큰 값은 898 이므로 898을 return 합니다.
+
+class Solution {
+    public int solution(int a, int b) {
+        int answer = 0;
+        String a1 =  Integer.toString(a);
+        String b1 = Integer.toString(b);
+        String num = a1+b1;
+        String num2 = b1+a1;
+        
+        if (Integer.parseInt(num) >=Integer.parseInt(num2)) {
+            answer = Integer.parseInt(num);
+        } else {
+            answer = Integer.parseInt(num2);
+        } 
+        
+        return answer;
+    }
+}
