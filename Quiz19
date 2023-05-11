@@ -1,0 +1,24 @@
+//조건 문자열
+// 두 수가 n과 m이라면
+//">", "=" : n >= m
+//"<", "=" : n <= m
+//">", "!" : n > m
+//"<", "!" : n < m
+//두 문자열 ineq와 eq 주어지는데, ineq는 "<"와 ">"중 하나고, eq는 "="와 "!"중 하나임
+//그리고 두 정수 n과 m이 주어질 때, n과 m이 ineq와 eq의 조건에 맞으면 1을 아니면 0을 return
+
+class Solution {
+    public int solution(String ineq, String eq, int n, int m) {
+
+        if(ineq.equals(">") && eq.equals("=")){
+            return n>=m? 1: 0;
+        }
+        if(ineq.equals("<") && eq.equals("=")){
+            return n<=m? 1: 0;
+        }
+        if(ineq.equals(">") && eq.equals("!")){
+            return n>m? 1:0;
+        }
+        return n<m? 1:0;
+    }
+}
