@@ -1,0 +1,19 @@
+// 코드처리하기
+// 문자열 code가 주어지고 code를 앞에서부터 읽으면서 만약 문자가 "1"이면 mode를 바꿈
+// mode가 0일 때, code[idx]가 "1"이 아니면 idx가 짝수일 때만 ret의 code[idx]를 추가
+// code[idx]가 "1"이면 mode를 0에서 1로 바꿉니다.
+// mode가 1일 때, code[idx]가 "1"이 아니면 idx가 홀수일 때만 ret의 맨 뒤에 code[idx]를 추가
+// code[idx]가 "1"이면 mode를 1에서 0으로 바꿉니다.
+// 문자열 code를 통해 만들어진 문자열 ret를 return
+
+class Solution {
+    public String solution(String code) {
+        String answer = "";
+        int mode = 0;
+        for (int i = 0; i < code.length(); i++) {
+            if (code.charAt(i) == '1') mode = 1 - mode;
+            else if (i % 2 == mode) answer += code.charAt(i);
+        }
+        return "".equals(answer) ? "EMPTY" : answer;
+    }
+}
